@@ -3,7 +3,7 @@
 
 keys = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"}
 
-with open("inp04.txt", 'r') as f:
+with open("input.txt", 'r') as f:
     not_seen = keys.copy()
     cnt = 0  # num valid
     for line in f:
