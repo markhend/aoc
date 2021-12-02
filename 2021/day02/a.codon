@@ -1,0 +1,11 @@
+f = open("input.txt")
+x, y = 0, 0
+for line in f:
+    direction, n = line.strip().split()
+    if direction == "up":
+        y -= int(n)
+    elif direction == "down":
+        y += int(n)
+    else:  # forward
+        x += int(n)
+print(x * y)
