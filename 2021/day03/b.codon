@@ -3,8 +3,7 @@
 # For "oxy" rating determine the most common value (0 or 1) in the current
 # bit position, and keep only numbers with that bit in that position.
 # If 0 and 1 are equally common, keep values with a 1 in the position
-# being considered.
-# "co2" rating is opposite process
+# being considered. "co2" rating is the opposite process.
 # Stop if only one number is left.
 
 f = open("input.txt")
@@ -22,7 +21,6 @@ def split_nums(nums, col):
 
 
 ones, zeros = split_nums(nums, 0)
-
 oxy_vals = ones.copy() if len(ones) >= len(zeros) else zeros.copy()
 co2_vals = ones.copy() if len(ones) < len(zeros) else zeros.copy()
 
