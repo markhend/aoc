@@ -1,0 +1,12 @@
+f = open("input.txt")
+res = [0] * 12
+# loop through all strings +1 for 1 and -1 for 0 for each pos
+for line in f:
+    for i, bit in enumerate(list(line.strip())):
+        if bit == '1':
+            res[i] += 1
+        else:
+            res[i] -= 1
+gamma = int(''.join('1' if n > 0 else '0' for n in res), 2)
+epsilon = int(''.join('0' if n > 0 else '1' for n in res), 2)
+print(gamma * epsilon)

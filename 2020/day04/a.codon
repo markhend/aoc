@@ -6,8 +6,10 @@ keys = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"}
 with open("input.txt", 'r') as f:
     not_seen = keys.copy()
     cnt = 0  # num valid
-    for line in f:
-        line = line.strip()
+    passports = [' '.join(item.strip() for item in f.readlines().split('\n\n'))]
+    for line in passports:
+        # line = line.strip()
+        print(line)
         if len(line) == 0:  # blank line
             if len(not_seen) == 0:
                 cnt += 1
