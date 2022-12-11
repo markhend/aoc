@@ -7,32 +7,37 @@ with open("in.txt", "r") as f:
 
 T_visited = {(0, 0)}
 
-# If the head is ever two steps directly up, down, left, or right
-# from the tail, the tail must also move one step in that direction
-# so it remains close enough:
-# Otherwise, if the head and tail aren't touching and aren't in the
-# same row or column, the tail always moves one step diagonally
-# to keep up: update state while keeping track of T location
+# Rather than two knots, you now must simulate a rope consisting of
+# ten knots. One knot is still the head of the rope and moves according
+# to the series of motions. Each knot further down the rope follows the
+# knot in front of it using the same rules as before.
 
 # move directions = R, L, U, D, followed by dist n
 H = [0, 0]  # [x, y]
-T = [0, 0]
-visited = {(0, 0)}  # T locations
+tails = [[0, 0] for _ in range(9)]
+# print(tails)
+visited = {(0, 0)}  # T9 locations
 
 
-def update(H, T):
-    # global T
+def update(H, T):  # part B have to account for 2 steps away diagonally
     x1, y1, x2, y2 = H[0], H[1], T[0], T[1]
     # print(x1, y1, x2, y2)
     if abs(x1 - x2) < 2 and abs(y1 - y2) < 2:  # within 1 step
         return
-    if abs(y1 - y2) == 2:  # 2 steps above or below
+
+    if abs(x1 - x2) == 2 and abs(y1 - y2) == 2:  # 2 steps diag
+        if y1 > y2:
+            y2 += 1
+            x2 += 1 if x1 > x2 else -1
+        elif y1 < y2:
+            y2 -= 1
+            x2 += 1 if x1 > x2 else -1
+    elif abs(y1 - y2) == 2:  # 2 steps above or below
         y2 += 1 if y1 > y2 else -1
         x2 = x1
     elif abs(x1 - x2) == 2:  # 2 steps right or left
         x2 += 1 if x1 > x2 else -1
         y2 = y1
-    visited.add((x2, y2))
     # T = [x2, y2]
     T[0], T[1] = x2, y2
     return
@@ -50,7 +55,12 @@ for move in moves:
             case 'L': H[0] -= 1
             case 'U': H[1] += 1
             case 'D': H[1] -= 1
-        update(H, T)
+        # move all the tails
+        head = H
+        for tail in tails:
+            update(head, tail)
+            head = tail
+        visited.add(tuple(tail))
     # print(H, T)
 # print(visited)
 print(len(visited))
