@@ -1,7 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using Microsoft.VisualBasic;
-
-var _sampleFilePath = "in.txt";
+﻿var _sampleFilePath = "in.txt";
 var lines = File.ReadLines(_sampleFilePath);
 
 // var stringBuilder = new StringBuilder();
@@ -45,10 +42,10 @@ foreach (var line in lines)
     var lastWordIdx = LastWordIdx(line);
     Console.Write($" {firstWordIdx} {lastWordIdx}");
 
-    if (firstWordIdx < firstNumIdx) 
+    if (firstWordIdx < firstNumIdx)
     {
         foreach (var s in num_strings)
-        { 
+        {
             if (line.IndexOf(s) == firstWordIdx)
             {
                 firstNum = WordToNum(s);
@@ -59,7 +56,7 @@ foreach (var line in lines)
     if (lastWordIdx > lastNumIdx)
     {
         foreach (var s in num_strings)
-        { 
+        {
             if (line.LastIndexOf(s) == lastWordIdx)
             {
                 lastNum = WordToNum(s);
@@ -112,24 +109,23 @@ char WordToNum(string s)
     {
         case "one":
             return '1';
-        case "two": 
+        case "two":
             return '2';
-        case "three": 
+        case "three":
             return '3';
-        case "four": 
+        case "four":
             return '4';
-        case "five": 
+        case "five":
             return '5';
-        case "six": 
+        case "six":
             return '6';
-        case "seven": 
+        case "seven":
             return '7';
-        case "eight": 
+        case "eight":
             return '8';
-        case "nine": 
+        case "nine":
             return '9';
         default:
             return '0';
     }
 }
-    
