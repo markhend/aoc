@@ -1,0 +1,15 @@
+/home/mhenders/aoc/2023/day02/bin/Debug/net7.0/day02
+/home/mhenders/aoc/2023/day02/bin/Debug/net7.0/day02.deps.json
+/home/mhenders/aoc/2023/day02/bin/Debug/net7.0/day02.runtimeconfig.json
+/home/mhenders/aoc/2023/day02/bin/Debug/net7.0/day02.dll
+/home/mhenders/aoc/2023/day02/bin/Debug/net7.0/day02.pdb
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/day02.csproj.AssemblyReference.cache
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/day02.GeneratedMSBuildEditorConfig.editorconfig
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/day02.AssemblyInfoInputs.cache
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/day02.AssemblyInfo.cs
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/day02.csproj.CoreCompileInputs.cache
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/day02.dll
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/refint/day02.dll
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/day02.pdb
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/day02.genruntimeconfig.cache
+/home/mhenders/aoc/2023/day02/obj/Debug/net7.0/ref/day02.dll

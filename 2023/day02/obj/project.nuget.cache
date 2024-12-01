@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "H7xGpNYgBzxAVjYUuc4TstRz8mq7PZ7IlG7OUimQuUvxN4/T7ruQ05pZ/nmdXS4NlhVYx26mnBYMsVesal8CRA==",
+  "dgSpecHash": "+YM8AvJtRklHSFOzywBX8vkQpN+V/UeEZLSQKMxR2yMiB7sXzZHRXzrt+FQVp0tBZi5I4zcwtqBFn+YfkTAf/w==",
   "success": true,
   "projectFilePath": "/home/mhenders/aoc/2023/day02/day02.csproj",
   "expectedPackageFiles": [],
