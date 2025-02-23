@@ -15,7 +15,6 @@ for lst in inp:
 
     if min_count <= password.count(char) <= max_count:
         res += 1
-
 print(res)
 
 res = 0
